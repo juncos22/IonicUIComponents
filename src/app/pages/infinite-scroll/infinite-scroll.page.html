@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ion Infinite Scroll</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let usuario of usuarios; let i = index;">
+    <ion-label>Usuario {{i+1}}</ion-label>
+  </ion-item>
+<ion-infinite-scroll threshold="100px" position="bottom" (ionInfinite)="loadData($event)">
+  <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando mas usuarios...">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+</ion-content>

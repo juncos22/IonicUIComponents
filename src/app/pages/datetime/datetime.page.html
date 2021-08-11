@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Datetime</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>MMMM</ion-label>
+    <ion-datetime displayFormat="MMMM" value="2012-12-15T13:47:20.789"></ion-datetime>
+  </ion-item>
+  
+  <ion-item (ionChange)="obtenerFecha($event)">
+    <ion-label>DD MM YY</ion-label>
+    <ion-datetime displayFormat="DD MM YY" placeholder="Select Date"></ion-datetime>
+  </ion-item>
+  
+  
+  <!-- <ion-item>
+    <ion-label>YYYY</ion-label>
+    <ion-datetime [pickerOptions]="customPickerOptions" placeholder="Custom Options" displayFormat="YYYY" min="1981" max="2002"></ion-datetime>
+  </ion-item> -->
+</ion-content>

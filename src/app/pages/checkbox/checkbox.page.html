@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Checkbox</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of form">
+      <ion-label>{{item.val}}</ion-label>
+      <ion-checkbox [checked]="item.isChecked" (ionChange)="recibirCheckbox($event)"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+
+  <!-- Checked Checkbox -->
+  <ion-checkbox [checked]="checkedValue" (ionChange)="recibirCheckbox($event)"></ion-checkbox>
+  
+</ion-content>

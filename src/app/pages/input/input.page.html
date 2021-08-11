@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ion Inputs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Default Label</ion-label>
+    <ion-input (ionChange)="obtenerNombre($event)" type="text" placeholder="Enter name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Bio</ion-label>
+    <ion-textarea [(ngModel)]="biografia" name="biografia" placeholder="Enter bio"></ion-textarea>
+  </ion-item>
+  <ion-button expand="block" fill="solid" shape="round">
+    Aceptar
+  </ion-button>
+</ion-content>

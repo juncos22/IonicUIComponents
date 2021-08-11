@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ion Chip</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #content [scrollEvents]="true">
+  <ion-button (click)="scrollDown()" expand="block" fill="outline" shape="round">
+    Scroll to Bottom
+  </ion-button>
+
+  <ion-item *ngFor="let item of fakeArray">
+    <ion-label>Item {{item}}</ion-label>
+  </ion-item>
+  
+  <ion-button (click)="scrollUp()" expand="block" fill="outline" shape="round">
+    Scroll to Top
+  </ion-button>
+
+  <!-- <ion-chip>
+    <ion-label>Default</ion-label>
+  </ion-chip>
+  
+  <ion-chip>
+    <ion-label color="secondary">Secondary Label</ion-label>
+  </ion-chip>
+  
+  <ion-chip color="secondary">
+    <ion-label color="dark">Secondary w/ Dark label</ion-label>
+  </ion-chip>
+
+  <ion-chip color="danger" outline="true">
+    <ion-avatar>
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <ion-label>Avatar Chip</ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip> -->
+</ion-content>

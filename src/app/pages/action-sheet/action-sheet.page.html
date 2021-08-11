@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ActionSheet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-button (click)="presentarAlerta()" expand="block" fill="solid" shape="round">
+  Activar ActionSheet
+</ion-button>
+<h3>La accion ha sido {{componentsIonic.accion}}</h3>
+</ion-content>
